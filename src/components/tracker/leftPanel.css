@@ -1,0 +1,157 @@
+.dashboard-container {
+  flex: 1;
+
+  display: flex;
+
+  background: #f5f6fa;
+}
+
+/* LEFT PANEL */
+
+.left-panel {
+  width: 380px;
+
+  padding: 30px;
+
+  border-right: 1px solid #e5e5e5;
+}
+
+.dashboard-title {
+  font-size: 42px;
+
+  font-weight: 700;
+
+  margin-bottom: 30px;
+
+  color: #111;
+}
+
+/* SUMMARY */
+
+.summary-container {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  padding: 25px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.summary-card h3 {
+  font-size: 20px;
+
+  color: #1b1b4b;
+}
+
+.summary-card h2 {
+  font-size: 40px;
+
+  font-weight: 700;
+}
+
+.summary-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.summary-badge {
+  background: rgba(255, 255, 255, 0.7);
+
+  padding: 6px 10px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+}
+
+/* CARD COLORS */
+
+.total {
+  background: #fff0f0;
+}
+
+.total h2 {
+  color: red;
+}
+
+.active {
+  background: #fff8ef;
+}
+
+.active h2 {
+  color: orange;
+}
+
+.recovered {
+  background: #eef9ee;
+}
+
+.recovered h2 {
+  color: #79c000;
+}
+
+.deaths {
+  background: #eef8ff;
+}
+
+.deaths h2 {
+  color: #3846c8;
+}
+
+/* COUNTRIES */
+
+.countries-title {
+  font-size: 32px;
+
+  margin-bottom: 20px;
+
+  color: #1b1b4b;
+}
+
+.countries-section {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.country-item {
+  background: white;
+
+  padding: 18px 20px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.country-item span {
+  font-size: 20px;
+}
+
+.country-item strong {
+  color: #1b1b4b;
+}
