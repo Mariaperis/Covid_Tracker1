@@ -1,13 +1,43 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import './Navigation.css'
+import { Link } from "react-router-dom";
+import "./navigation.css";
 
-export const Navigation = () => {
-    return (
-        <nav className='navigation'>
-            <Link to="/">Home</Link>
-            <Link to="/sidebar">Sidebar</Link>
-            <Link to="/tracker-2">Tracker 2</Link>
-        </nav>
-    )
-}
+const Navigation = () => {
+  return (
+    <nav className="navbar">
+      <h2>COVIMAP</h2>
+
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+
+        <li>
+          <Link to="/">Prevention</Link>
+        </li>
+
+        <li>
+          <Link to="/">Qurantine</Link>
+        </li>
+
+        <li>
+          <Link to="/">Page</Link>
+        </li>
+
+        <li>
+          <Link to="/">About</Link>
+        </li>
+
+        <li>
+          <Link to="/">Help</Link>
+        </li>
+
+        <li>
+          <Link to="/tracker">Tracker</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navigation;
