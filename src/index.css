@@ -1,0 +1,26 @@
+/* @import 'tailwindcss' */
+/*index.css*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@theme {
+  --font-roboto: "Poppins", sans-serif;
+  --color-roboto: #121158;
+}
+
+@import "tailwindcss";
+
+@layer utilities {
+  .underline-full {
+    display: block;                 /* ← permite ocupar 100% */
+    width: 100%;                    /* ← largo completo */
+    border-bottom: 1px solid #d9d8d8; /* ← tu color */
+    /* padding-top: 50px;               ← espacio arriba */
+    padding-bottom: 10px;           /* ← espacio abajo */
+  }
+  .font-roboto-bold {
+    font-family: var(--font-roboto);
+    font-weight: 900;
+  }
+}

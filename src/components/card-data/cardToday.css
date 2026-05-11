@@ -1,0 +1,48 @@
+.card-country-container {
+    display: flex;
+    /*align-items: left;*/
+    gap: 0.25rem;
+    padding: 0.25rem;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex: 0 0 80%;
+}
+
+.text-cointainer {
+    display: flex;
+    flex-direction: column; /* Fuerza que el texto vaya uno debajo del otro */
+    line-height: 1.2;
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+}
+
+.country-flag {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.country-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1e1034;
+}
+
+.country-total-cases {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2f48d3;
+    text-align: right;
+}
+
+.country-today-cases {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2f48d3;
+    text-align: right;
+}
