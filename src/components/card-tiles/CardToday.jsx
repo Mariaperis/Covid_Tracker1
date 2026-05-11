@@ -8,7 +8,7 @@ export const CardToday = ({flagUrl, countryName, todayCases}) => {
             <img src={flagUrl} alt={countryName} className="country-flag"/>
             <div className="text-cointainer">
                 <h3 className="country-name">{countryName}</h3>
-                <p className="country-today-cases">{todayCases}</p>      
+                <p className="country-tiles">{todayCases}</p>      
             </div>
         </div>
         </>

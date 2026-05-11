@@ -8,7 +8,7 @@ export const CardTotalDeath = ({flagUrl, countryName, totaldeaths}) => {
             <img src={flagUrl} alt={countryName} className="country-flag"/>
             <div className="text-cointainer">
                 <h3 className="country-name">{countryName}</h3>
-                <p className="country-total-deaths">{totaldeaths}</p>
+                <p className="country-tiles">{totaldeaths}</p>
             </div>
         </div>
         </>

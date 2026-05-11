@@ -25,24 +25,21 @@
 }
 
 .country-name {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: #1e1034;
+    display: block; 
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500; 
+    line-height: 1; 
+    margin-bottom: 5px;
+    color: #121158;
 }
 
-.country-total-cases {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #2f48d3;
-    text-align: right;
-}
-
-.country-today-cases {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #2f48d3;
-    text-align: right;
+.country-tiles {
+    display: block; 
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700; 
+    line-height: 1; 
+    margin-bottom: 5px;
+    color: #121158;
 }
