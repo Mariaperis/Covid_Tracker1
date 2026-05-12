@@ -1,0 +1,19 @@
+.countryWise-updates {
+  display: flex;
+  max-width: 80%;
+  max-height: 120px;
+}
+.countryWise-layout {
+  display: flex;
+  background: #e9ecf5;
+  min-height: 100vh;
+}
+.countryWise-title {
+  color: #262f5a;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 28px;
+}
+.country-panel {
+  padding: 0 40px;
+  background-color: #ebeef5;
+}

@@ -1,0 +1,16 @@
+.conteiner-wise {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  max-width: 100%;
+}
+.conteiner-wise > li {
+  list-style: none;
+}
+.countryWise-updates {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}

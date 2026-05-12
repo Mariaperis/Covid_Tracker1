@@ -1,8 +1,21 @@
+import { ConteinerTotal } from "../../components/countryWise/conteinerTotal/ConteinerTotal";
+import { ConteinerWise } from "../../components/countryWise/conteinerWise/ConteinerWise";
+import "./countryWise.css";
+
 export const CountryWise = () => {
-    return (
+  return (
+    <div className="countryWise-layout">
+      <div className="country-panel">
+        <h1 className="countryWise-title">Covid-19 Country Wise - Tabs</h1>
         <div>
-            <h1>Covid-19 Country Wise - Tabs</h1>
-            <p>Pagina 04</p>
+          
+          <ConteinerWise />
         </div>
-    )
-}
+        <div className="countryWise-updates">
+          <ConteinerTotal />
+        </div>
+      </div>
+      </div>
+
+  );
+};
