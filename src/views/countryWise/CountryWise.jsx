@@ -8,10 +8,9 @@ export const CountryWise = () => {
       <div className="country-panel">
         <h1 className="countryWise-title">Covid-19 Country Wise - Tabs</h1>
         <div>
-          
           <ConteinerWise />
         </div>
-        <div className="countryWise-updates">
+        <div>
           <ConteinerTotal />
         </div>
       </div>

@@ -1,17 +1,22 @@
 
 import dataTotal from '../../../assets/data/data-total'
 import { TotalCard } from '../../common/total-cards/TotalCard.jsx'
+import "./ConteinerTotal.css";
 
 export const ConteinerTotal = () => {
     return (
-        <div className='total-conteiner'>
+        <ul className='total-conteiner'>
+           
             {dataTotal.map((total) => (
-            <TotalCard title={total.title}    
+            <li key={total.title}>
+            <TotalCard 
+            title={total.title}    
             number={total.number}
             color={total.color}
             />
-             ))            
-            }            
-        </div>
+            </li>         
+            ))            
+            }               
+        </ul>
     )
 }
