@@ -5,20 +5,19 @@ import { CardTotalDeath } from '../components/card-tiles/CardTotalDeath'
 import { CardTodayDeath } from '../components/card-tiles/CardTodayDeath'
 import { CardActive } from '../components/card-tiles/CardActive'
 import { CardTotalRecovered } from '../components/card-tiles/CardTotalRecovered'
-import { TilesHook } from '../hooks/UseApi';
+import { MergedApi } from "../hooks/MergedApi";
 import '../index.css'
 import './tiles.css'
 
-
 function Tiles() {
-    const { countries, loading } = TilesHook();
+    const { loading, getTop } = MergedApi();
+
     if (loading) {
         return <h2>Loading ... </h2>
     }
-    const getTop = (Covid_info) => [...countries].sort((a, b) => b[Covid_info] - a[Covid_info]).slice(0, 10);
-    
+
     const tilConfig = [
-        { title: 'Top Cases', data: getTop('cases'), Component: CardCases, propName: 'totalCases',  valueKey: 'cases' },
+        { title: 'Top Cases', data: getTop('cases'), Component: CardCases, propName: 'totalCases', valueKey: 'cases' },
         { title: 'Today Cases', data: getTop('todayCases'), Component: CardToday, propName: 'todayCases', valueKey: 'todayCases' },
         { title: 'Total Deaths', data: getTop('deaths'), Component: CardTotalDeath, propName: 'totaldeaths', valueKey: 'deaths' },
         { title: 'Today Deaths', data: getTop('todayDeaths'), Component: CardTodayDeath, propName: 'todaydeaths', valueKey: 'todayDeaths' },
@@ -28,12 +27,17 @@ function Tiles() {
 
     return (
         <div className='my-5 mx-5'>
-            <h1 className='font-roboto-bold text-roboto tiles-text underline-full'>Top 10 Country wise Covid-19 Update - Tiles</h1>
+            <h1 className='font-roboto-bold text-roboto tiles-text underline-full'>
+                Top 10 Country wise Covid-19 Update - Tiles
+            </h1>
+
             <div className='tiles-container my-5'>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-5 gap-y-4">
+
                     {tilConfig.map(({ title, data, Component, propName, valueKey }) => (
-                        <div key={title} className="space-y-4">
+                        <div key={title} className="over space-y-4">
                             <h4 className='font-roboto-bold text-roboto'>{title}</h4>
+
                             {data.map((country) => (
                                 <Component
                                     key={country.country}
@@ -44,6 +48,7 @@ function Tiles() {
                             ))}
                         </div>
                     ))}
+
                 </div>
             </div>
         </div>

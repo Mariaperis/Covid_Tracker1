@@ -14,3 +14,23 @@ export const CardTotalDeath = ({flagUrl, countryName, totaldeaths}) => {
         </>
     )
 }
+/*export const ExportDateApi = (timeline) => {
+  if (!timeline || !timeline.cases) return []; // ← evita el error
+
+  const parseApiDate = (fechaString) => {
+    const [mes, dia, añoCorto] = fechaString.split("/");
+    return {
+      dia: Number(dia),
+      mes: Number(mes),
+      año: 2000 + Number(añoCorto)
+    };
+  };
+
+  const filterByYear = (year) => (fechaString) =>
+    parseApiDate(fechaString).año === year;
+
+  return Object.keys(timeline.cases)
+    .filter(filterByYear(2020))
+    .map(parseApiDate);
+};
+*/
