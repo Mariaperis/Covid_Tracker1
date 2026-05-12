@@ -17,7 +17,6 @@ export function DateHook() {
                     todayCases: getTodayValue(item.timeline, "cases"),
                     todayDeaths: getTodayValue(item.timeline, "deaths")
                 }));
-
                 setHistorical(parsed);
                 setLoading(false); 
 
@@ -26,9 +25,7 @@ export function DateHook() {
                 setLoading(false);
             }
         };
-
         api(api_url_historical);
     }, [api_url_historical]);
-
     return { historical, loading };
 }

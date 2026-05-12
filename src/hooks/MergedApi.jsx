@@ -7,12 +7,10 @@ export function MergedApi() {
 
     if (loading) return { loading: true, getTop: () => [] };
 
-    // Crear mapa rápido por país
     const histMap = Object.fromEntries(
         historical.map(h => [h.country, h])
     );
 
-    // Fusionar datos
     const merged = countries.map(c => {
         const hist = histMap[c.country] || {};
 

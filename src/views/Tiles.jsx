@@ -33,11 +33,9 @@ function Tiles() {
 
             <div className='tiles-container my-5'>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-5 gap-y-4">
-
                     {tilConfig.map(({ title, data, Component, propName, valueKey }) => (
                         <div key={title} className="over space-y-4">
                             <h4 className='font-roboto-bold text-roboto'>{title}</h4>
-
                             {data.map((country) => (
                                 <Component
                                     key={country.country}
@@ -48,7 +46,6 @@ function Tiles() {
                             ))}
                         </div>
                     ))}
-
                 </div>
             </div>
         </div>
