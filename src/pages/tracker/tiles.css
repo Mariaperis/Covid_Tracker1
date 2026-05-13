@@ -1,0 +1,11 @@
+.underline-full {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #d9d8d8;
+    padding-bottom: 10px;
+  }
+
+  .font-roboto-bold {
+    font-family: var(--font-roboto);
+    font-weight: 900;
+  }

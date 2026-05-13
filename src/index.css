@@ -1,10 +1,20 @@
-body {
-  margin: 0px;
-  overflow: hidden;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@theme {
+  --font-roboto: "Poppins", sans-serif;
+  --color-roboto: #121158;
 }
 
+@import "tailwindcss";
+
+/*body {
+    margin: 0px;
+    overflow: hidden;
+  }
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }*/
