@@ -1,16 +1,14 @@
 .card-country-container {
-    display: flex;
-    gap: 0.25rem;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    flex: 0 0 50%;
+    border-radius: 0 !important;
+    overflow: visible;
+    /* importante */
 }
+
 
 .card-country-container:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
+    border-radius: 0;
 }
 
 .text-cointainer {
@@ -27,23 +25,21 @@
     object-fit: cover;
 }
 
-/* 🔽 LETRA DEL NOMBRE MÁS PEQUEÑA Y MÁS LIMPIA */
 h3.country-name {
     display: block;
     width: 100%;
-    font-size: 12px;     
+    font-size: 12px;
     font-weight: 500;
-    line-height: 1.1;
-    margin-bottom: 4px;
+    line-height: 1;
+    margin-bottom: 5px;
     color: #121158;
 }
 
-/* Valor numérico (tiles) */
 .country-tiles {
     font-family: var(--font-roboto);
     display: block;
     width: 100%;
-    font-size: 15px;      /* antes 15px */
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 4px;

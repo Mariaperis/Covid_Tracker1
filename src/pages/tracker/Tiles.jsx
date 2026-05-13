@@ -26,12 +26,12 @@ function Tiles() {
     ];
 
     return (
-        <div className="my-3 mx-2">
+        <div className="tiles-container">
             <h1 className="font-roboto-bold text-roboto underline-full">
                 Top 10 Country wise Covid-19 Update - Tiles
             </h1>
 
-            <div className="tiles-container my-2 mx-0">
+            <div>
                 <div className="tiles-grid">
                     {tilConfig.map(({ title, data, Component, propName, valueKey }) => (
                         <div key={title} className="tiles-column space-y-2">
