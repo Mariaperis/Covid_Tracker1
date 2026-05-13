@@ -1,7 +1,5 @@
 import { useState } from "react";
-
-import useCountries from "../../hooks/useCountries";
-
+import { InfoHook } from "../../hooks/UseApi";
 import CovidTable from "../../components/table/CovidTable";
 import TableHeader from "../../components/table/TableHeader";
 import TableSearch from "../../components/table/TableSearch";
@@ -14,8 +12,8 @@ import "./table.css";
 
 function Table() {
 
-  const { countriesAll, loading } =
-    useCountries();
+  const { countries, loading } =
+    InfoHook();
 
   const [search, setSearch] =
     useState("");
@@ -27,7 +25,7 @@ function Table() {
     useState(10);
 
   const filteredCountries =
-    countriesAll.filter((country) =>
+    countries.filter((country) =>
 
       country.country
         .toLowerCase()

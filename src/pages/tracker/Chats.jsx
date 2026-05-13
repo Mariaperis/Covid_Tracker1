@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { InfoHook } from "../../hooks/UseApi";
-import StatsCard from "../../components/common/StatsCard";
 import { getStatsConfig } from "../../utils/statsConfig";
+import StatsCard from "../../components/common/StatsCard";
 import LoadingDots from "../../components/common/LoadingDots";
 import FloatingActions from "../../components/common/FloatingActions";
 
