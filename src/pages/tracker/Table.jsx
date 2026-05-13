@@ -60,7 +60,7 @@ function Table() {
 
   return (
 
-    <div className="table-page">
+    <div className="right-panel table-page">
 
       <TableHeader />
 
