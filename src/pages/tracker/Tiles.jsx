@@ -1,12 +1,12 @@
 import React from 'react'
-import { CardCases } from '../components/card-tiles/CardCases'
-import { CardToday } from '../components/card-tiles/CardToday'
-import { CardTotalDeath } from '../components/card-tiles/CardTotalDeath'
-import { CardTodayDeath } from '../components/card-tiles/CardTodayDeath'
-import { CardActive } from '../components/card-tiles/CardActive'
-import { CardTotalRecovered } from '../components/card-tiles/CardTotalRecovered'
-import { MergedApi } from "../hooks/MergedApi";
-import '../index.css'
+import { CardCases } from '../../components/card-tiles/CardCases'
+import { CardToday } from '../../components/card-tiles/CardToday'
+import { CardTotalDeath } from '../../components/card-tiles/CardTotalDeath'
+import { CardTodayDeath } from '../../components/card-tiles/CardTodayDeath'
+import { CardActive } from '../../components/card-tiles/CardActive'
+import { CardTotalRecovered } from '../../components/card-tiles/CardTotalRecovered'
+import { MergedApi } from "../../hooks/MergedApi";
+import '../../../src/index.css'
 import './tiles.css'
 
 function Tiles() {
