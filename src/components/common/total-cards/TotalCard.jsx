@@ -1,11 +1,7 @@
 import "./TotalCard.css";
 import covidIcon from "../../../assets/icons/covid-defult.svg";
 
-//import { CovidIcon } from "../../../assets/icons/covid-defult.svg";
-
-
-export const TotalCard = ({title, number, color}) => {
-    
+export const TotalCard = ({title, number, color}) => {    
   return (
                                            
     <div className="total-card-container">

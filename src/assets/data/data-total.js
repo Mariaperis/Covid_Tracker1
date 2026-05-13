@@ -26,13 +26,13 @@ const dataTotal = [
     color: "blue3",
   },
   {
-    id: 3,
+    id: 5,
     title: "New Cases",
     number: 0,
     color: "orange",
   },
   {
-    id: 3,
+    id: 6,
     title: "New Deaths",
     number: 0,
     color: "red2",
