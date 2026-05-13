@@ -1,0 +1,96 @@
+.total-card-container {
+  margin: 10px;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  position: relative;
+
+  height: 60px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  max-width: 250px;
+  max-height: 115px;
+  min-width: 200px;
+  min-height: 80px;
+}
+.card-wigget {
+  position: relative;
+  min-height: 260px;
+  transition: transform 0.3s ease;
+}
+.card-wigget:hover {
+  transform: translateY(-10px);
+}
+.covid-icon {
+  position: absolute;
+  top: -50px;
+  left: 130px;
+  width: 140px;
+  height: auto;
+  opacity: 0.2;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  background-color: transparent;
+}
+.covid-icon.red {
+  color: red;
+}
+img {
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  display: block;
+}
+
+img:hover {
+  animation: rotateOnly 1.5s linear infinite;
+}
+@keyframes rotateOnly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(60deg);
+  }
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+h3 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+.red{
+  color: #ff0000;
+}
+.green {
+  color: #82c519;
+}
+.blue3 {
+  color: #2c6dff;
+}
+.orange {
+  color: #ff6a07;
+}
+.red2 {
+  color: #4c0000;
+}
+.blue{
+  color: #3639ae;
+}
