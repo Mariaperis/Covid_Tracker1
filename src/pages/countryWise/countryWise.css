@@ -1,0 +1,13 @@
+.countryWise-updates {
+  display: flex;
+}
+
+.countryWise-title {
+  color: #262f5a;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 28px;
+}
+.country-panel {
+  padding: 0 40px;
+  background-color: #ebeef5;
+}

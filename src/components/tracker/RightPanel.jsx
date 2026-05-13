@@ -1,7 +1,7 @@
 import Chats from "../../pages/tracker/Chats";
 import Table from "../../pages/tracker/Table";
 import Tiles from "../../pages/tracker/Tiles";
-import CountryWise from "../../pages/tracker/CountryWise";
+import { CountryWise } from "../../pages/countryWise/CountryWise";
 
 const RightPanel = ({ activeScreen }) => {
   switch (activeScreen) {
@@ -15,7 +15,8 @@ const RightPanel = ({ activeScreen }) => {
       return <Tiles />;
 
     case "country-wise":
-      return <CountryWise />;
+      return <CountryWise />
+
 
     default:
       return <Chats />;
