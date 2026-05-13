@@ -6,8 +6,10 @@
   color: #262f5a;
   font-family: "Arial Narrow", Arial, sans-serif;
   font-size: 28px;
+  padding: 20px;;
 }
 .country-panel {
   padding: 0 40px;
   background-color: #ebeef5;
+  height:100%;
 }
