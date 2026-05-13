@@ -26,16 +26,17 @@ function Tiles() {
     ];
 
     return (
-        <div className='my-5 mx-5'>
-            <h1 className='font-roboto-bold text-roboto tiles-text underline-full'>
+        <div className="my-3 mx-2">
+            <h1 className="font-roboto-bold text-roboto underline-full">
                 Top 10 Country wise Covid-19 Update - Tiles
             </h1>
 
-            <div className='tiles-container my-5'>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-5 gap-y-4">
+            <div className="tiles-container my-2 mx-0">
+                <div className="tiles-grid">
                     {tilConfig.map(({ title, data, Component, propName, valueKey }) => (
-                        <div key={title} className="over space-y-4">
-                            <h4 className='font-roboto-bold text-roboto'>{title}</h4>
+                        <div key={title} className="tiles-column space-y-2">
+                            <h4 className="font-roboto-bold text-roboto">{title}</h4>
+
                             {data.map((country) => (
                                 <Component
                                     key={country.country}
@@ -49,7 +50,8 @@ function Tiles() {
                 </div>
             </div>
         </div>
-    )
+    );
+
 }
 
 export default Tiles
