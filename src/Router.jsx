@@ -1,8 +1,8 @@
 //import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CountryWise } from "./views/countryWise/CountryWise";
-import Home from "./views/Home";
-import Tracker from "./views/Tracker";
+
+import Home from "./pages/home/Home";
+import Tracker from "./pages/tracker/Tracker";
 
 const Router = () => {
   return (
@@ -14,9 +14,6 @@ const Router = () => {
           path="/tracker"
           element={<Tracker />}
         />
-
-        <Route path="/country-wise" element={<CountryWise />} />  
-
       </Routes>
     </BrowserRouter>
   );

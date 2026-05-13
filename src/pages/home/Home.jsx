@@ -1,4 +1,4 @@
-import Navigation from "../layouts/navbar/Navigation";
+import Navigation from "../../components/layout/navbar/Navigation";
 import "./home.css";
 
 const Home = () => {

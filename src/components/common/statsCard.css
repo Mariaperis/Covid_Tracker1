@@ -1,0 +1,38 @@
+.stats-card {
+  width: 320px;
+  height: 120px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.stats-card h3 {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.stats-card h2 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.blue {
+  color: #3d5afe;
+}
+
+.red {
+  color: #ff2d2d;
+}
+
+.green {
+  color: #79c000;
+}
+
+.orange {
+  color: #ff6b00;
+}
