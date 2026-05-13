@@ -1,0 +1,16 @@
+import React from 'react'
+import '../cardCountry.css'
+
+export const CardCountry = ({flagUrl, countryName, totalCases}) => {
+    return (
+        <>
+        <div className="card-country-container">
+            <img src={flagUrl} alt={countryName} className="country-flag"/>
+            <div className="text-cointainer">
+                <h3 className="country-name">{countryName}</h3>
+                <p className="country-total-cases">{totalCases}</p>
+            </div>
+        </div>
+        </>
+    )
+}
