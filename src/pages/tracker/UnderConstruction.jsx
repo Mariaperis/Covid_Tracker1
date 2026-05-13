@@ -4,7 +4,6 @@ import "./underConstruction.css";
 
 function UnderConstruction({
   title = "Page under construction",
-  subtitle = "This section will be available soon.",
 }) {
   return (
     <div className="right-panel construction-page">
@@ -20,8 +19,6 @@ function UnderConstruction({
         </span>
 
         <h1>{title}</h1>
-
-        <p>{subtitle}</p>
 
       </div>
 
