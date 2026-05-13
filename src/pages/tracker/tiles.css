@@ -1,11 +1,41 @@
+/* Línea inferior decorativa del título */
 .underline-full {
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid #d9d8d8;
-    padding-bottom: 10px;
-  }
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #d9d8d8;
+  padding-bottom: 10px;
+}
 
-  .font-roboto-bold {
-    font-family: var(--font-roboto);
-    font-weight: 900;
-  }
+/* Fuente Roboto Bold */
+.font-roboto-bold {
+  font-family: var(--font-roboto);
+  font-weight: 900;
+}
+
+/* Contenedor general de las tiles */
+.tiles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px; /* Reduce el espacio entre tiles */
+  width: 100%;
+}
+
+h1.text-roboto{
+  font-size: 22px;
+}
+
+/* Contenedor del grid de 6 columnas */
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  overflow-x: auto; /* Scroll horizontal si no caben las 6 columnas */
+  padding-bottom: 10px; /* Evita corte del scroll */
+}
+
+/* Cada columna con scroll vertical */
+.tiles-column {
+  max-height: 70vh; /* Ajusta según tu diseño */
+  /*overflow-y: auto;
+  padding-right: 8px; /* Evita que el scroll tape contenido */
+}
