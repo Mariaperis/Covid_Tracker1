@@ -13,5 +13,6 @@
     list-style: none;
     flex: 1 1 250px;
     max-width: 300px;
+    min-height: 120px;
 }
 
