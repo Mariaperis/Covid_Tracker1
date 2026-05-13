@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
-
-import useCountries from "../../hooks/useCountries";
-
+import { InfoHook } from "../../hooks/UseApi";
 import StatsCard from "../../components/common/StatsCard";
-
 import { getStatsConfig } from "../../utils/statsConfig";
 import LoadingDots from "../../components/common/LoadingDots";
 import FloatingActions from "../../components/common/FloatingActions";
@@ -11,21 +8,21 @@ import FloatingActions from "../../components/common/FloatingActions";
 import "./chats.css";
 
 function Chats() {
-  const { countriesAll, loading } = useCountries();
+  const { countries, loading } = InfoHook();
 
   const [selectedCountry, setSelectedCountry] = useState("Afghanistan");
 
-  const [countryData, setCountryData] = useState(null);
+  const [countryData, setCountries] = useState(null);
 
   useEffect(() => {
-    if (countriesAll.length > 0) {
-      const country = countriesAll.find(
+    if (countries.length > 0) {
+      const country = countries.find(
         (item) => item.country === selectedCountry,
       );
 
-      setCountryData(country);
+      setCountries(country);
     }
-  }, [selectedCountry, countriesAll]);
+  }, [selectedCountry, countries]);
 
   if (loading || !countryData) {
     return <h2>Loading...</h2>;
@@ -43,7 +40,7 @@ function Chats() {
           value={selectedCountry}
           onChange={(e) => setSelectedCountry(e.target.value)}
         >
-          {countriesAll.map((country) => (
+          {countries.map((country) => (
             <option
               key={country.country}
               value={country.country}
