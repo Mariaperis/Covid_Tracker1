@@ -1,38 +1,32 @@
-.stats-card {
+.stats-card-virus {
   position: relative;
-
   width: 320px;
   height: 120px;
-
   background: white;
-
   padding: 20px;
-
   overflow: hidden;
 }
 
-.stats-card:hover {
+.stats-card-virus:hover {
   transform: translateY(-8px);
   transition: transform 0.3s ease;
 }
 
-.stats-card:hover .stats-virus-icon {
-  animation: spin 5s linear infinite;
+.stats-card-virus:hover .stats-virus-icon img {
+  animation: spin 10s linear infinite;
 }
 
-.stats-card h3 {
+.stats-card-virus h3 {
   font-size: 18px;
   font-weight: 500;
   margin: 0 0 10px 0;
-
   position: relative;
   z-index: 2;
 }
 
-.stats-card h2 {
+.stats-card-virus h2 {
   font-size: 35px;
   font-weight: 700;
-
   margin-bottom: 0;
   position: relative;
   z-index: 2;

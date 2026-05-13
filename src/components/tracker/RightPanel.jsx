@@ -1,6 +1,7 @@
 import Chats from "../../pages/tracker/Chats";
 import Table from "../../pages/tracker/Table";
 import Tiles from "../../pages/tracker/Tiles";
+import UnderConstruction from "../../pages/tracker/UnderConstruction";
 import { CountryWise } from "../../pages/countryWise/CountryWise";
 
 const RightPanel = ({ activeScreen }) => {
@@ -17,9 +18,8 @@ const RightPanel = ({ activeScreen }) => {
     case "country-wise":
       return <CountryWise />
 
-
     default:
-      return <Chats />;
+      return <UnderConstruction />;
   }
 };
 

@@ -9,7 +9,7 @@ function StatsCard({
 }) {
 
   return (
-    <div className="stats-card">
+    <div className="stats-card-virus">
 
       <div className="stats-virus-icon">
         <img src={icon} alt="virus-icon" />
