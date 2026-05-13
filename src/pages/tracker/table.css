@@ -6,7 +6,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* HEADER */
 .table-header {
   margin-bottom: 20px;
 }
@@ -17,7 +16,6 @@
   font-weight: 600;
 }
 
-/* CONTROLES */
 .table-controls {
   display: flex;
   justify-content: space-between;
@@ -41,7 +39,6 @@
   font-size: 14px;
 }
 
-/* TABLA */
 .covid-table {
   width: 100%;
   border-collapse: collapse;
@@ -72,7 +69,6 @@
   background: #f5f5f5;
 }
 
-/* BANDERAS */
 .country-flag {
   width: 40px;
   height: 25px;
@@ -80,7 +76,6 @@
   border-radius: 4px;
 }
 
-/* FOOTER */
 .table-footer {
   margin-top: 20px;
   display: flex;
@@ -94,7 +89,6 @@
   font-size: 13px;
 }
 
-/* PAGINACIÓN */
 .pagination {
   display: flex;
   gap: 6px;
