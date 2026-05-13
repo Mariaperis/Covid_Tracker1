@@ -5,6 +5,7 @@ import { CardTotalDeath } from '../../components/card-tiles/CardTotalDeath'
 import { CardTodayDeath } from '../../components/card-tiles/CardTodayDeath'
 import { CardActive } from '../../components/card-tiles/CardActive'
 import { CardTotalRecovered } from '../../components/card-tiles/CardTotalRecovered'
+import FloatingActions from '../../components/common/FloatingActions';
 import { MergedApi } from "../../hooks/MergedApi";
 import '../../../src/index.css'
 import './tiles.css'
@@ -49,9 +50,9 @@ function Tiles() {
                     ))}
                 </div>
             </div>
+            <FloatingActions />
         </div>
     );
-
 }
 
 export default Tiles
