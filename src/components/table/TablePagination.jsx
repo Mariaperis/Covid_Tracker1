@@ -1,5 +1,3 @@
-import "../../pages/tracker/table.css";
-
 function TablePagination({
   currentPage,
   totalPages,
@@ -50,7 +48,7 @@ function TablePagination({
         Next
       </button>
 
-    </div>
+      </div>
   );
 }
 

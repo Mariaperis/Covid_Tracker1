@@ -1,12 +1,11 @@
 import { useState } from "react";
-
-import useCountries from "../../hooks/useCountries";
-
+import { InfoHook } from "../../hooks/UseApi";
 import CovidTable from "../../components/table/CovidTable";
 import TableHeader from "../../components/table/TableHeader";
 import TableSearch from "../../components/table/TableSearch";
 import TablePagination from "../../components/table/TablePagination";
 import TableSelect from "../../components/table/TableSelect";
+import FloatingActions from "../../components/common/FloatingActions";
 
 import { paginate } from "../../utils/paginate";
 
@@ -14,8 +13,8 @@ import "./table.css";
 
 function Table() {
 
-  const { countriesAll, loading } =
-    useCountries();
+  const { countries, loading } =
+    InfoHook();
 
   const [search, setSearch] =
     useState("");
@@ -27,7 +26,7 @@ function Table() {
     useState(10);
 
   const filteredCountries =
-    countriesAll.filter((country) =>
+    countries.filter((country) =>
 
       country.country
         .toLowerCase()
@@ -60,7 +59,7 @@ function Table() {
 
   return (
 
-    <div className="table-page">
+    <div className="right-panel table-page">
 
       <TableHeader />
 
@@ -153,6 +152,7 @@ function Table() {
         />
 
       </div>
+      <FloatingActions />
 
     </div>
   );

@@ -1,24 +1,41 @@
 .stats-card {
+  position: relative;
+
   width: 320px;
   height: 120px;
 
   background: white;
 
-  border-radius: 14px;
-
   padding: 20px;
 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.stats-card:hover {
+  transform: translateY(-8px);
+  transition: transform 0.3s ease;
+}
+
+.stats-card:hover .stats-virus-icon {
+  animation: spin 5s linear infinite;
 }
 
 .stats-card h3 {
-  font-size: 16px;
-  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+
+  position: relative;
+  z-index: 2;
 }
 
 .stats-card h2 {
-  font-size: 52px;
+  font-size: 35px;
   font-weight: 700;
+
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .blue {
@@ -35,4 +52,30 @@
 
 .orange {
   color: #ff6b00;
+}
+
+.stats-virus-icon {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  right: -30px;
+  top: -30px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.1;
+}
+
+.stats-virus-icon img {
+  width: 140px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
