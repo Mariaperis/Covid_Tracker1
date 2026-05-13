@@ -1,5 +1,5 @@
 import React from 'react'
-import './cardToday.css'
+import './cardglobal.css'
 
 export const CardToday = ({flagUrl, countryName, todayCases}) => {
     return (

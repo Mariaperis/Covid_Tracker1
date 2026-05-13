@@ -1,0 +1,74 @@
+.floating-actions {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 15px;
+
+  z-index: 999;
+}
+
+.floating-btn {
+  width: 56px;
+  height: 56px;
+
+  border: none;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: white;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+.floating-btn span {
+  white-space: nowrap;
+
+  max-width: 0;
+  overflow: hidden;
+
+  opacity: 0;
+
+  transition: all 0.4s ease;
+}
+
+.floating-btn:hover {
+  width: 170px;
+  padding: 0 20px;
+}
+
+.floating-btn:hover span {
+  max-width: 120px;
+  opacity: 1;
+}
+
+.support-btn {
+  background: linear-gradient(
+    90deg,
+    #29b6f6,
+    #26c6da
+  );
+}
+
+.buy-btn {
+  background: linear-gradient(
+    90deg,
+    #8bc34a,
+    #9ccc65
+  );
+}

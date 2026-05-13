@@ -1,11 +1,36 @@
 .underline-full {
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid #d9d8d8;
-    padding-bottom: 10px;
-  }
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #d9d8d8;
+  padding-bottom: 10px;
+}
 
-  .font-roboto-bold {
-    font-family: var(--font-roboto);
-    font-weight: 900;
-  }
+.font-roboto-bold {
+  font-family: var(--font-roboto);
+  font-weight: 900;
+}
+
+
+.tiles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+h1.text-roboto{
+  font-size: 22px;
+}
+
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.tiles-column {
+  max-height: 90vh; 
+}
