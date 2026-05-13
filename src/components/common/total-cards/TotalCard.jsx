@@ -10,10 +10,8 @@ export const TotalCard = ({title, number, color}) => {
             <img src={covidIcon} alt="Covid icon" className={color}/>
         </div>
         <div className="info">
-          <h3 className="total-tit">{title}</h3>
-          
-          <h2 className= {color}> {number}</h2>
-         
+          <h3 className="total-tit">{title}</h3>  
+          <h2 className= {color}> {number}</h2>         
         </div>
       </div>
     </div>
