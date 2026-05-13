@@ -1,41 +1,47 @@
-import "../../index.css";
+import blueVirus from "../icons/covid-blue.svg";
+import redVirus from "../icons/covid-red.svg";
+import greenVirus from "../icons/covid-green.svg";
+import lightBlueVirus from "../icons/covid-defult.svg";
+import orangeVirus from "../icons/covid-orange.svg";
+import pinkVirus from "../icons/covid-redark.svg";
 
 const dataTotal = [
   {
-    id: 1,
     title: "Total Cases",
-    number: 1000000,
+    number: "1000000",
     color: "blue",
+    icon: blueVirus,
   },
   {
-    id: 2,
     title: "Total Deaths",
-    number: 50000,
+    number: "50000",
     color: "red",
+    icon: redVirus,
   },
   {
-    id: 3,
     title: "Total Recovered",
-    number: 800000,
+    number: "800000",
     color: "green",
+    icon: greenVirus,
   },
   {
-    id: 4,
     title: "Total Active",
-    number: 800000,
-    color: "blue3",
+    number: "800000",
+    color: "lightBlue",
+    icon: lightBlueVirus,
   },
   {
-    id: 5,
     title: "New Cases",
-    number: 0,
+    number: "0",
     color: "orange",
+    icon: orangeVirus,
   },
   {
-    id: 6,
     title: "New Deaths",
-    number: 0,
-    color: "red2",
-  }
+    number: "0",
+    color: "darkRed",
+    icon: pinkVirus,
+  },
 ];
+
 export default dataTotal;
