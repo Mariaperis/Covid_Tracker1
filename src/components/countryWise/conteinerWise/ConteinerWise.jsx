@@ -2,23 +2,27 @@ import { CardCountry } from "../CardCountry";
 import useCountryWise from "../../../hooks/useCountryWise.js";
 import "./ConteinerWise.css";
 
-export const ConteinerWise = ({ selectedCountry, setSelectedCountry }) => {
+export const ConteinerWise = ({ countries, selectedCountry, setSelectedCountry }) => {
   const { filterCountries, loading } = useCountryWise();
-  const handleClick = (country) => setSelectedCountry(country.country);
-  
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+
+  if (loading) return <p>Loading...</p>;
+
+  const handleClick = (country) => {
+    console.log("click en ", country.country);
+    setSelectedCountry(country.country);
+  };
 
   return (
     <ul className="conteiner-wise">
       <li>
         {filterCountries.map((country) => (
           <CardCountry
+            key={country.country}
             flagUrl={country.countryInfo.flag}
             countryName={country.country}
+            totalCases={country.cases}
             active={selectedCountry === country.country}
-            onClick={() => handleClick(country)}
+            onClick={() => setSelectedCountry(country.country)} 
           />
         ))}
       </li>

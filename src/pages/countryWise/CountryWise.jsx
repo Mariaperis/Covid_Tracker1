@@ -1,15 +1,10 @@
-//import { ConteinerTotal }  from "../../components/countryWise/conteinerTotal/ConteinerTotal";
 import { ConteinerWise } from "../../components/countryWise/conteinerWise/ConteinerWise";
-
 import { useEffect, useState } from "react";
 import { InfoHook } from "../../hooks/UseApi";
-
 import StatsCard from "../../components/common/StatsCard";
 import { getStatsConfig } from "../../utils/statsConfig";
 import LoadingDots from "../../components/common/LoadingDots";
 import FloatingActions from "../../components/common/FloatingActions";
-
-
 import "./countryWise.css";
 
 export const CountryWise = () => {
@@ -23,7 +18,6 @@ export const CountryWise = () => {
       const country = countries.find(
         (item) => item.country === selectedCountry,
       );
-
       setCountries(country);
     }
   }, [selectedCountry, countries]);
@@ -31,10 +25,7 @@ export const CountryWise = () => {
   if (loading || !countryData) {
     return <h2>Loading...</h2>;
   }
-
   const stats = getStatsConfig(countryData);
-console.log()
-
   return (
     <div className="countryWise-layout">
       <div className="country-panel">
@@ -47,6 +38,7 @@ console.log()
 
         <div>
           <ConteinerWise 
+          countries={countries}
           selectedCountry={selectedCountry}
           setSelectedCountry={setSelectedCountry}
           />
