@@ -76,7 +76,6 @@ function Chats() {
 
         </div>
 
-        <LoadingDots />
         <FloatingActions />
 
       </div>
