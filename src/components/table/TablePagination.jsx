@@ -1,72 +1,54 @@
 function TablePagination({
   currentPage,
   totalPages,
-  onPageChange,
-  totalItems,
-  itemsPerPage,
+  setCurrentPage,
 }) {
+  const maxVisible = 5;
+  const pages = [];
 
-  const start =
-    (currentPage - 1) * itemsPerPage + 1;
+  pages.push(1);
 
-  const end = Math.min(
-    currentPage * itemsPerPage,
-    totalItems
-  );
+  for (let i = 2; i <= Math.min(maxVisible, totalPages - 1); i++) {
+    pages.push(i);
+  }
+
+  if (totalPages > maxVisible + 1) {
+    pages.push("...");
+  }
+
+  if (totalPages > 1) {
+    pages.push(totalPages);
+  }
 
   return (
-    <div className="pagination-container">
+    <div className="pagination">
 
-      {/* LEFT */}
-      <div className="pagination-info">
-        Showing {start} to {end} of {totalItems} entries
-      </div>
+      <button
+        disabled={currentPage === 1}
+        onClick={() => setCurrentPage(currentPage - 1)}
+      >
+        Previous
+      </button>
 
-      {/* RIGHT */}
-      <div className="pagination-buttons">
-
+      {pages.map((page, index) => (
         <button
-          disabled={currentPage === 1}
-          onClick={() =>
-            onPageChange(currentPage - 1)
-          }
+          key={index}
+          disabled={page === "..."}
+          className={currentPage === page ? "active-page" : ""}
+          onClick={() => page !== "..." && setCurrentPage(page)}
         >
-          Previous
+          {page}
         </button>
+      ))}
 
-        {[...Array(totalPages)].map((_, index) => {
-
-          const page = index + 1;
-
-          return (
-            <button
-              key={page}
-              className={
-                currentPage === page
-                  ? "active-page"
-                  : ""
-              }
-              onClick={() =>
-                onPageChange(page)
-              }
-            >
-              {page}
-            </button>
-          );
-        })}
-
-        <button
-          disabled={currentPage === totalPages}
-          onClick={() =>
-            onPageChange(currentPage + 1)
-          }
-        >
-          Next
-        </button>
+      <button
+        disabled={currentPage === totalPages}
+        onClick={() => setCurrentPage(currentPage + 1)}
+      >
+        Next
+      </button>
 
       </div>
-
-    </div>
   );
 }
 

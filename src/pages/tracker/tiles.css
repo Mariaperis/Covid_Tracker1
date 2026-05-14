@@ -1,6 +1,8 @@
 .font-roboto-bold {
   font-family: var(--font-roboto);
-  font-weight: 900;
+  font-weight: 600;
+  font-size: 32px;
+  color: #0f1b6d;
 }
 
 .tiles-container {
@@ -21,7 +23,11 @@
 .tiles-column {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+}
+
+.tiles-column h4 {
+  font-size: 16px;
+  color: #0f1b6d;
 }
 
 .tiles-container::-webkit-scrollbar {

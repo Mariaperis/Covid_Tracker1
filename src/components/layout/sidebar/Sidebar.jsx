@@ -1,5 +1,7 @@
 import React from "react";
 import "./sidebar.css";
+import { Link } from "react-router-dom";
+import UnderConstruction from "../../../pages/tracker/UnderConstruction";
 
 import logo from "../../../assets/icons/favicon.png";
 
@@ -51,57 +53,36 @@ const menuItems = [
 ];
 
 const Sidebar = ({ activeScreen, setActiveScreen }) => {
-
   return (
     <nav className="navigation">
-
       <div className="nav-content">
-
         <ul>
-
           <li className="logo">
-            <img
-              src={logo}
-              alt="logo"
-              className="logo-animation"
-            />
+            <Link to="/">
+              <img src={logo} alt="logo" className="logo-animation" />
+            </Link>
           </li>
 
           <div className="menu-icons">
-
             {menuItems.map((item) => (
-
               <li key={item.id}>
-
                 <button
                   onClick={() => setActiveScreen(item.id)}
-                  className={
-                    activeScreen === item.id
-                      ? "active"
-                      : ""
-                  }
+                  className={activeScreen === item.id ? "active" : ""}
                 >
                   {item.icon}
                 </button>
-
               </li>
-
             ))}
-
           </div>
 
           <li className="bottom-icon">
-
             <button>
               <BiLogoFlickr />
             </button>
-
           </li>
-
         </ul>
-
       </div>
-
     </nav>
   );
 };

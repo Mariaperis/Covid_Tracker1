@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../../assets/icons/favicon.png";
 import "./navigation.css";
 
 const Navigation = () => {
   return (
     <nav className="navbar">
-      <h2>COVIMAP</h2>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+
+        <h2>COVIMAP</h2>
+      </div>
 
       <ul>
         <li>
@@ -32,7 +37,7 @@ const Navigation = () => {
           <Link to="/">Help</Link>
         </li>
 
-        <li>
+        <li className="tracker-btn">
           <Link to="/tracker">Tracker</Link>
         </li>
       </ul>

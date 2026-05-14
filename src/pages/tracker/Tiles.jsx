@@ -27,7 +27,7 @@ function Tiles() {
     ];
 
     return (
-        <div className="tiles-container">
+        <div className="right-panel tiles-container">
             <h1 className="font-roboto-bold text-roboto underline-full">
                 Top 10 Country wise Covid-19 Update - Tiles
             </h1>

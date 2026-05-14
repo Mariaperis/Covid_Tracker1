@@ -5,6 +5,7 @@ import TableHeader from "../../components/table/TableHeader";
 import TableSearch from "../../components/table/TableSearch";
 import TablePagination from "../../components/table/TablePagination";
 import TableSelect from "../../components/table/TableSelect";
+import FloatingActions from "../../components/common/FloatingActions";
 
 import { paginate } from "../../utils/paginate";
 
@@ -151,6 +152,7 @@ function Table() {
         />
 
       </div>
+      <FloatingActions />
 
     </div>
   );
