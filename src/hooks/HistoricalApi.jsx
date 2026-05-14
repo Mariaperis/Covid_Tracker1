@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getHistorical } from "../api/endPoint";
-import { getTodayValue } from "../utils/Prueba";
+import { getTodayValue } from "../utils/dateInfo";
 
 export function DateHook() {
     const [historical, setHistorical] = useState([]);
