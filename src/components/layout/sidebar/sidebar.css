@@ -48,7 +48,7 @@
   margin-bottom: 20px;
 }
 
-.menu-icons button,
+.menu-icons a,
 .bottom-icon button {
   width: 58px;
   height: 58px;
@@ -66,13 +66,13 @@
   transition: all 0.3s ease;
 }
 
-.menu-icons button.active {
+.menu-icons a.active {
   background: #4f46e5;
   color: white;
 }
 
-.menu-icons button:hover,
-.bottom-icon button:hover {
+.menu-icons a:hover,
+.bottom-icon a:hover {
   background: #4f46e5;
   color: white;
 }

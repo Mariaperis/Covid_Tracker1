@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 import Sidebar from "../../components/layout/sidebar/Sidebar";
 import LeftPanel from "../../components/tracker/LeftPanel";
@@ -7,21 +7,13 @@ import RightPanel from "../../components/tracker/RightPanel";
 import "./tracker.css";
 
 function Tracker() {
-
-  const [activeScreen, setActiveScreen] = useState("chats");
-
   return (
     <div className="tracker-page">
-
-      <Sidebar
-        activeScreen={activeScreen}
-        setActiveScreen={setActiveScreen}
-      />
+      <Sidebar />
 
       <LeftPanel />
 
-      <RightPanel activeScreen={activeScreen} />
-
+      <Outlet />
     </div>
   );
 }

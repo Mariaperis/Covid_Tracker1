@@ -1,6 +1,6 @@
 import React from "react";
 import "./sidebar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import UnderConstruction from "../../../pages/tracker/UnderConstruction";
 
 import logo from "../../../assets/icons/favicon.png";
@@ -20,39 +20,47 @@ import {
 const menuItems = [
   {
     id: "chats",
+    path: "/tracker/chats",
     icon: <BiPieChartAlt />,
   },
   {
     id: "table",
+    path: "/tracker/table",
     icon: <BiMenu />,
   },
   {
     id: "tiles",
+    path: "/tracker/tiles",
     icon: <BiGridAlt />,
   },
   {
     id: "country-wise",
+    path: "/tracker/country-wise",
     icon: <BiFolder />,
   },
   {
     id: "widgets",
+    path: "/tracker/widgets",
     icon: <BiCopy />,
   },
   {
     id: "charts",
+    path: "/tracker/charts",
     icon: <BiLineChart />,
   },
   {
     id: "continent",
+    path: "/tracker/continent",
     icon: <BiWorld />,
   },
   {
     id: "messages",
+    path: "/tracker/messages",
     icon: <BiComment />,
   },
 ];
 
-const Sidebar = ({ activeScreen, setActiveScreen }) => {
+const Sidebar = () => {
   return (
     <nav className="navigation">
       <div className="nav-content">
@@ -66,12 +74,12 @@ const Sidebar = ({ activeScreen, setActiveScreen }) => {
           <div className="menu-icons">
             {menuItems.map((item) => (
               <li key={item.id}>
-                <button
-                  onClick={() => setActiveScreen(item.id)}
-                  className={activeScreen === item.id ? "active" : ""}
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) => (isActive ? "active" : "")}
                 >
                   {item.icon}
-                </button>
+                </NavLink>
               </li>
             ))}
           </div>

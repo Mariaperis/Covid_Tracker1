@@ -7,8 +7,7 @@ import LoadingDots from "../../components/common/LoadingDots";
 import FloatingActions from "../../components/common/FloatingActions";
 import "./countryWise.css";
 
-export const CountryWise = () => {
-
+function CountryWise() {
   const { countries, loading } = InfoHook();
   const [selectedCountry, setSelectedCountry] = useState("France");
   const [countryData, setCountries] = useState(null);
@@ -27,25 +26,23 @@ export const CountryWise = () => {
   }
   const stats = getStatsConfig(countryData);
   return (
-    <div className="countryWise-layout">
+    <div className="right-panel countryWise-page">
       <div className="country-panel">
-        <div className="tit-panel">
-        <h1 className="countryWise-title">Covid-19 Country Wise - Tabs</h1>
-        <p className="updated-date">Updated: June 5, 2022</p>
+        <div className="country-header">
+          <h1>Covid-19 Country Wise - Tabs</h1>
         </div>
 
         <div className="header-line"></div>
 
         <div>
-          <ConteinerWise 
-          countries={countries}
-          selectedCountry={selectedCountry}
-          setSelectedCountry={setSelectedCountry}
+          <ConteinerWise
+            countries={countries}
+            selectedCountry={selectedCountry}
+            setSelectedCountry={setSelectedCountry}
           />
         </div>
 
         <div className="stats-grid">
-
           {stats.map((stat) => (
             <StatsCard
               key={stat.title}
@@ -55,13 +52,12 @@ export const CountryWise = () => {
               icon={stat.icon}
             />
           ))}
-
         </div>
-        
-        <LoadingDots />
+
         <FloatingActions />
       </div>
-      </div>
-
+    </div>
   );
-};
+}
+
+export default CountryWise;

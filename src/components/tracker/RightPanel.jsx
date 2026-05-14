@@ -2,7 +2,7 @@ import Chats from "../../pages/tracker/Chats";
 import Table from "../../pages/tracker/Table";
 import Tiles from "../../pages/tracker/Tiles";
 import UnderConstruction from "../../pages/tracker/UnderConstruction";
-import { CountryWise } from "../../pages/countryWise/CountryWise";
+import CountryWise from "../../pages/countryWise/CountryWise";
 
 const RightPanel = ({ activeScreen }) => {
   switch (activeScreen) {
