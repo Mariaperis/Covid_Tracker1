@@ -6,7 +6,7 @@ import Tracker from "./pages/tracker/Tracker";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Covid_Tracker1">
       <Routes>
         <Route path="/" element={<Home />} />
 
