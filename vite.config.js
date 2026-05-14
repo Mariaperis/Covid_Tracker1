@@ -7,4 +7,5 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
+  base: '/Covid_Tracker1/',
 })
