@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
-import { getCountriesData } from "../api/covidApi";
+import { InfoHook } from "../hooks/UseApi";
 
 function useCountryWise() {
-  const [countries, setCountries] = useState([]);
-  const [loading, setLoading] = useState([]);
+  const {countries, loading} = InfoHook();
 
   const nameCountries = [
     "USA",
@@ -16,35 +14,12 @@ function useCountryWise() {
     "Turkey",
   ];
 
-  useEffect(() => {
-
-    const fetchCountries = async () => {
-      try {
-        const data = await getCountriesData();
-
-        const wiseCountries = (data, nameCountries) => {
-          return data.filter((item) => nameCountries.includes(item.country));
-        };
-
-        setCountries(wiseCountries);
-        
-      } catch (error) {
-
-        console.log(error);
-
-      } finally {
-
-        setLoading(false);
-      }
-    };
-
-    fetchCountries();
-  }, []);
-
-  return{
-    countries,
-    loading,
+  const wiseCountries = (countries, nameCountries) => {
+    return countries.filter((item) => nameCountries.includes(item.country));
   };
+  const filterCountries = wiseCountries(countries, nameCountries);
+
+  return {filterCountries, loading};
 }
 
 export default useCountryWise;
