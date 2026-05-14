@@ -1,0 +1,10 @@
+.tracker-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.right-panel {
+  flex: 1;
+  background: #f3f4f8;
+}

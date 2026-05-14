@@ -1,0 +1,18 @@
+.total-conteiner {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.total-conteiner > li {
+    padding: 0;
+    list-style: none;
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-height: 120px;
+}
+

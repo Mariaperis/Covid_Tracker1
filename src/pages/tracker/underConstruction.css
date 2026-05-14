@@ -1,0 +1,42 @@
+.construction-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+}
+
+.construction-card {
+  text-align: center;
+}
+
+.construction-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  color: #64748b;
+}
+
+.construction-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: #eef2ff;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.construction-card h1 {
+  font-size: 32px;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+

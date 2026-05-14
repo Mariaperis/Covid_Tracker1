@@ -1,0 +1,47 @@
+.card-country-container {
+    border-radius: 0 !important;
+    overflow: visible;
+    /* importante */
+}
+
+
+.card-country-container:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border-radius: 0;
+}
+
+.text-cointainer {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    align-items: flex-start;
+}
+
+.country-flag {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+h3.country-name {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 5px;
+    color: #121158;
+}
+
+.country-tiles {
+    font-family: var(--font-roboto);
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    color: #121158;
+}
