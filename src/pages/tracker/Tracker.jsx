@@ -8,7 +8,7 @@ import "./tracker.css";
 
 function Tracker() {
 
-  const [activeScreen, setActiveScreen] = useState("dashboard");
+  const [activeScreen, setActiveScreen] = useState("chats");
 
   return (
     <div className="tracker-page">

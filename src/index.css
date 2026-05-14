@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "tailwindcss";
 
 @theme {
   --font-roboto: "Poppins", sans-serif;
@@ -6,16 +7,16 @@
   --container-8xl: 96rem;
 }
 
-
-@import "tailwindcss";
-
-/*body {
-    margin: 0px;
-    overflow: hidden;
+@layer components {
+  .underline-full {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #d9d8d8;
+    padding-bottom: 10px;
+  }
+  h1.text-roboto {
+    font-size: 22px;
+    font-weight: 600;
   }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }*/
+}

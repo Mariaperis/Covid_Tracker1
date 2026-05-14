@@ -5,6 +5,7 @@ import { CardTotalDeath } from '../../components/card-tiles/CardTotalDeath'
 import { CardTodayDeath } from '../../components/card-tiles/CardTodayDeath'
 import { CardActive } from '../../components/card-tiles/CardActive'
 import { CardTotalRecovered } from '../../components/card-tiles/CardTotalRecovered'
+import FloatingActions from '../../components/common/FloatingActions';
 import { MergedApi } from "../../hooks/MergedApi";
 import '../../../src/index.css'
 import './tiles.css'
@@ -26,12 +27,12 @@ function Tiles() {
     ];
 
     return (
-        <div className="my-3 mx-2">
+        <div className="right-panel tiles-container">
             <h1 className="font-roboto-bold text-roboto underline-full">
                 Top 10 Country wise Covid-19 Update - Tiles
             </h1>
 
-            <div className="tiles-container my-2 mx-0">
+            <div>
                 <div className="tiles-grid">
                     {tilConfig.map(({ title, data, Component, propName, valueKey }) => (
                         <div key={title} className="tiles-column space-y-2">
@@ -49,9 +50,9 @@ function Tiles() {
                     ))}
                 </div>
             </div>
+            <FloatingActions />
         </div>
     );
-
 }
 
 export default Tiles

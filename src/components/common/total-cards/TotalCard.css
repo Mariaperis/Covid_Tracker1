@@ -15,14 +15,17 @@
   min-width: 200px;
   min-height: 100px;
 }
+
 .card-wigget {
   position: relative;
   min-height: 360px;
   transition: transform 0.3s ease;
 }
+
 .card-wigget:hover {
   transform: translateY(-10px);
 }
+
 .covid-icon {
   position: absolute;
   top: -50px;
@@ -35,9 +38,11 @@
   align-items: left;
   background-color: transparent;
 }
+
 .covid-icon.red {
   color: red;
 }
+
 img {
   border-style: none;
   width: 100%;
@@ -46,43 +51,38 @@ img {
   display: block;
 }
 
-img:hover {
-  animation: rotateOnly 1.5s linear infinite;
-}
-@keyframes rotateOnly {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(60deg);
-  }
-}
-
 h3 {
   font-size: 1.25rem;
   color: #111827;
   margin: 0;
 }
+
 h2 {
   font-size: 2rem;
   margin: 0;
   font-weight: 700;
 }
+
 .red{
   color: #ff0000;
 }
+
 .green {
   color: #82c519;
 }
+
 .blue3 {
   color: #2c6dff;
 }
+
 .orange {
   color: #ff6a07;
 }
+
 .red2 {
   color: #4c0000;
 }
+
 .blue{
   color: #3639ae;
 }
