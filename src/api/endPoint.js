@@ -1,12 +1,10 @@
-const API_URL = import.meta.env.VITE_API_URL;
-
 export const getCountries = async () => {
-  const res = await fetch(`${API_URL}/countries`);
+  const res = await fetch("https://disease.sh/v3/covid-19/countries");
   return res.json();
 };
 
 export const getHistorical = async () => {
-  const res = await fetch(`${API_URL}/historical?lastdays=all`);
+  const res = await fetch("https://disease.sh/v3/covid-19/historical?lastdays=all");
   return res.json();
 };
 
